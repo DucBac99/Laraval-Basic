@@ -4,12 +4,13 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use App\Http\Controllers\Admin\MainController;
 
-class MainControllers extends Controller
+class MainController extends Controller
 {
     public function index()
     {
-        echo 'Admin';
+        return view('admin.home', [
+            'title' => 'Trang Quản Trị Admin'
+        ]);
     }
 }
